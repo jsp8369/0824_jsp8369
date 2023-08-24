@@ -1,0 +1,222 @@
+<!doctype html>
+
+
+
+<html>
+
+<meta charset="utf-8">
+
+<head>
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+
+
+
+
+<style>
+
+* {font-family: "맑은 고딕"; color:#666;}
+
+body {margin: 0;}
+
+h1 {font-size: 20px;}
+
+.min {width: 200px; height: 50px;  border: 1px solid #666; padding: 20px 0 0 20px; margin: 20px;}
+
+.max {width: 200px; height: 50px;  border: 1px solid #666; padding: 20px 0 0 20px; margin: 20px;}
+
+.avg {width: 200px; height: 50px;  border: 1px solid #666; padding: 20px 0 0 20px; margin: 20px;}
+
+
+
+</style>
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+<body>
+
+
+
+
+
+<h1><i class="xi-folder-o"></i>A반 학생들의 수학 성적 배열을 준비하고 그 데이터에서 <br>
+
+최대값, 최소값과 평균을 구하는 함수를 만드시오.</h1>
+
+
+
+
+
+
+
+
+
+  <script>
+
+
+
+
+
+
+
+
+
+  //최소값
+
+  function min1(ele){
+
+    var min=100;
+
+    for(var i=0; i<ele.length; i++){
+
+      if(min>ele[i]){
+
+        min=ele[i];
+
+      }
+
+    }
+
+  return(min);
+
+  }
+
+
+
+
+
+  //최대값
+
+  function max1(ele){
+
+    var max=0;
+
+    for( var i=0; i<ele.length; i++){
+
+      if(max<ele[i]){
+
+        max=ele[i];
+
+      }
+
+    }
+
+  return(max);
+
+  }
+
+
+
+  //평균값
+
+  function avg1(ele){
+
+    var sum=0;
+
+    var avg=0;
+
+    for(var i=0; i<ele.length; i++){
+
+      sum+=ele[i];
+
+
+
+    }
+
+    avg=sum/ele.length;
+
+    return(avg);
+
+  }
+
+
+
+  //최소값, 최대값, 평균값 가져오는 함수
+
+  function score(ele){
+
+    var min_value=min1(ele);
+
+    var max_value=max1(ele);
+
+    var avg_value=avg1(ele);
+
+
+
+    document.write('<div class="min">' +'최소값='+min_value+'</div>');
+
+    document.write('<div class="max">'+'최대값='+max_value+'</div>');
+
+    document.write('<div class="avg">'+'평균값='+parseInt(avg_value)+'</div>');
+
+
+
+    return;
+
+  }
+
+
+
+
+
+
+
+  var arr= [];
+
+  var numbering = parseInt(prompt('몇명입니까.','0'));
+
+  var input = function(){
+
+      var math= Number(prompt('점수를 입력하시오.','100'));
+
+      arr.push(math);
+
+   }
+
+
+
+
+
+   i=0;
+
+   while( i<numbering ){
+
+      input();
+
+      i++;
+
+   }
+
+
+
+
+
+  document.write('수학점수'+'<h1>'+arr+'</h1>');
+
+  score(arr);
+
+
+
+  </script>
+
+</body>
+
+
+
+</html>
+[출처] 최대값, 최소값, 평균값, for문 / 함수로 step3|작성자 공룡

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="result">color</h1>
+
+    <button onclick="chc()">click1</button>
+    <button id="btn">click2</button>
+    <button id="btn2">click3</button>
+
+    <script>
+        function chc() {
+            document.getElementById("result").style.color="green";
+        }
+
+        document.getElementById("btn").onclick=function() {
+            chc();
+        }
+
+        document.getElementById("btn2").onclick=function() {
+            document.getElementById("result").style.color="tomato";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box {width:200px; height:200px; border:1px solid #ccc; margin:30px;}
+</style>
+<body>
+    <h1>점심 메뉴 고르기</h1>
+    <button id="btn1">click</button>
+    <div id="box">오늘의 메뉴는?</div>
+
+    <script>
+        btn1.onclick=function () {
+            var menu = ["짜장면", "짬뽕", "볶음밥", "마파두부", "울면"];
+            var menuNum = Math.floor(Math.random()*menu.length);
+            var result = menu[menuNum];
+            box.innerHTML=result;
+        }
+    </script>
+</body>
+</html>

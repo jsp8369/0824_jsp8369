@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr= [20, 42, 40, 31, 14, 57]
+
+        function min(ele) {
+            let min=100;
+            for (var i=0; i<ele.length; i++) {
+                if (min > ele[i]) {
+                    min=ele[i];
+                }
+            }
+            return(min);
+        }
+
+        function max(ele) {
+            let max=0;
+            for (var i=0; i<ele.length; i++) {
+                if (max<ele[i]) {
+                    max=ele[i];
+                }
+            }
+            return(max);
+        }
+
+        function sum(ele) {
+            let sum=0;
+            let avg=0;
+            for (var i=0; i<ele.length; i++) {
+                sum += ele[i]
+            }
+            return(sum)
+        }
+
+        function avg(ele) {
+            let sum=0;
+            let avg=0;
+            for (var i=0; i<ele.length; i++) {
+                sum += ele[i]
+            }
+            avg = sum/ele.length
+            return(avg)
+        }
+
+        function scores(ele) {
+            var min_value = min(ele);
+            var max_value = max(ele);
+            var sum_value = sum(ele);
+            var avg_value = avg(ele);
+
+            document.write("최소값 = " + min_value + "<br>")
+            document.write("최대값 = " + max_value + "<br>")
+            document.write("합계값 = " + sum_value + "<br>")
+            document.write("평균값 = " + avg_value)
+            return;
+
+        }
+
+        scores(arr)
+    </script>
+</body>
+</html>
